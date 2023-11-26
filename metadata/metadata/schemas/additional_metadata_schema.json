@@ -1,0 +1,18 @@
+{
+  "type": "array",
+  "minItems": 1,
+  "maxItems": 20,
+  "items": {
+    "type": "object",
+    "required": ["type"],
+    "properties": {
+      "type": {"type": "string", "enum": ["string", "number", "integer", "boolean", "object", "array"]},
+      "name": {"type": "string", "maxLength": 50},
+      "format": {"type": "string", "enum": ["date", "time", "date-time", "uuid"]},
+      "description": {"type": "string", "maxLength": 100},
+      "default": {"type": ["number","string", "boolean", "object", "array", "null"]},
+      "required": {"type": "boolean"
+      }
+    }
+  }
+}
